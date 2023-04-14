@@ -1,0 +1,269 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_biografia
+    - field.field.user.user.field_codice_fiscale
+    - field.field.user.user.field_cognome
+    - field.field.user.user.field_data_di_nascita
+    - field.field.user.user.field_data_fine_incarico
+    - field.field.user.user.field_email
+    - field.field.user.user.field_extra_info
+    - field.field.user.user.field_genere
+    - field.field.user.user.field_nome
+    - field.field.user.user.field_picture
+    - field.field.user.user.field_telefono
+    - field.field.user.user.field_tipologia_incarico
+    - field.field.user.user.field_tipologia_posto
+    - field.field.user.user.field_tipologia_supplenza
+    - image.style.medium
+  module:
+    - datetime
+    - field_group
+    - image
+    - path
+    - telephone
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_persona:
+      children:
+        - group_profilo
+        - group_anagrafe
+        - group_contratto
+        - group_contatti
+        - group_informazioni
+      label: Persona
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_profilo:
+      children:
+        - account
+        - language
+        - timezone
+        - langcode
+        - path
+      label: Profilo
+      region: content
+      parent_name: group_persona
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: 'Informazioni che riguardano il profilo.'
+        required_fields: true
+    group_anagrafe:
+      children:
+        - field_nome
+        - field_cognome
+        - field_picture
+        - field_genere
+        - field_data_di_nascita
+        - field_codice_fiscale
+      label: Anagrafe
+      region: content
+      parent_name: group_persona
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: 'Informazioni anagrafiche.'
+        required_fields: true
+    group_contatti:
+      children:
+        - field_telefono
+        - field_email
+      label: Contatti
+      region: content
+      parent_name: group_persona
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: 'Contatti della persona. Queste informazioni saranno rese pubbliche <strong>a tutti i visitatori</strong>.'
+        required_fields: true
+    group_informazioni:
+      children:
+        - field_biografia
+        - field_extra_info
+      label: Informazioni
+      region: content
+      parent_name: group_persona
+      weight: 24
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: 'Queste informazioni saranno visibili <strong>a tutti i visitatori</strong>.'
+        required_fields: true
+    group_contratto:
+      children:
+        - field_tipologia_posto
+        - field_tipologia_incarico
+        - field_tipologia_supplenza
+        - field_data_fine_incarico
+      label: Contratto
+      region: content
+      parent_name: group_persona
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: 'Informazioni sul contratto.'
+        required_fields: true
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_biografia:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_codice_fiscale:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cognome:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_data_di_nascita:
+    type: datetime_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_data_fine_incarico:
+    type: datetime_default
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 5
+    region: content
+    settings:
+      placeholder: email@example.com
+      size: 60
+    third_party_settings: {  }
+  field_extra_info:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_genere:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nome:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_picture:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: bar
+      preview_image_style: medium
+    third_party_settings: {  }
+  field_telefono:
+    type: telephone_default
+    weight: 4
+    region: content
+    settings:
+      placeholder: '+393331234567'
+    third_party_settings: {  }
+  field_tipologia_incarico:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tipologia_posto:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tipologia_supplenza:
+    type: options_select
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  language:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

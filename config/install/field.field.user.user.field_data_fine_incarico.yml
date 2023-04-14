@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_data_fine_incarico
+  module:
+    - datetime
+    - user
+id: user.user.field_data_fine_incarico
+field_name: field_data_fine_incarico
+entity_type: user
+bundle: user
+label: 'Durata incarico'
+description: 'Nel caso in cui la tipologia dell''incarico è a "Tempo determinato", seleziona la data di fine dell''incarico.  Questa informazione sarà visibile <strong>solo agli amministratori</strong>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

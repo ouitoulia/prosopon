@@ -1,0 +1,29 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_tipologia_incarico
+    - taxonomy.vocabulary.tipologia_incarichi
+  module:
+    - user
+id: user.user.field_tipologia_incarico
+field_name: field_tipologia_incarico
+entity_type: user
+bundle: user
+label: 'Tipologia incarico'
+description: "Seleziona la tipologia dell'incarico.  Questa informazione sarà visibile <strong>solo agli amministratori</strong>."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipologia_incarichi: tipologia_incarichi
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

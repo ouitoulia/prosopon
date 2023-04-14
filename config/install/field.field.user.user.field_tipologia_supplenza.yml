@@ -1,0 +1,29 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_tipologia_supplenza
+    - taxonomy.vocabulary.tipologia_supplenze
+  module:
+    - user
+id: user.user.field_tipologia_supplenza
+field_name: field_tipologia_supplenza
+entity_type: user
+bundle: user
+label: 'Tipologia supplenza'
+description: 'Nel caso in cui la tipologia dell''incarico è a "Tempo determinato", seleziona la tipologia della supplenza. Questa informazione sarà visibile <strong>solo agli amministratori</strong>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipologia_supplenze: tipologia_supplenze
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

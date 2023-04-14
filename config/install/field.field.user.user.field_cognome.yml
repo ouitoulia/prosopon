@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_cognome
+  module:
+    - user
+id: user.user.field_cognome
+field_name: field_cognome
+entity_type: user
+bundle: user
+label: Cognome
+description: 'Inserisci il cognome. Questa informazione sarà visibile <strong>a tutti i visitatori</strong>.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

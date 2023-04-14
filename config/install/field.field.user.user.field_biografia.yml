@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_biografia
+  module:
+    - user
+id: user.user.field_biografia
+field_name: field_biografia
+entity_type: user
+bundle: user
+label: Biografia
+description: 'Breve biografia. Si consiglia di non superare i 160 caratteri.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,16 @@
+name: "Prosopon"
+description: "Prosopon è un modulo Drupal che gestisce l'entità Persona."
+package: "Ouitoulía"
+
+type: module
+core_version_requirement: ^10
+dependencies:
+  - drupal:datetime
+  - drupal:field
+  - drupal:file
+  - drupal:image
+  - drupal:options
+  - drupal:telephone
+  - drupal:text
+  - drupal:field_group
+  - ouitoulia:lexika

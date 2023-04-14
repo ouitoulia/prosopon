@@ -1,0 +1,23 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_data_di_nascita
+  module:
+    - datetime
+    - user
+id: user.user.field_data_di_nascita
+field_name: field_data_di_nascita
+entity_type: user
+bundle: user
+label: 'Data di nascita'
+description: 'Inserisci la data di nascita. Questa informazione sarà visibile <strong>solo agli amministratori</strong>.'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '-18 years'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

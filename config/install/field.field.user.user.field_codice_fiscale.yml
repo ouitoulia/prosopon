@@ -1,0 +1,19 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_codice_fiscale
+  module:
+    - user
+id: user.user.field_codice_fiscale
+field_name: field_codice_fiscale
+entity_type: user
+bundle: user
+label: 'Codice fiscale'
+description: 'Inserisci il codice fiscale. Questa informazione sarà visibile <strong>solo agli amministratori</strong>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

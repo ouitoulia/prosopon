@@ -1,0 +1,24 @@
+{
+    "name": "ouitoulia/prosopon",
+    "description": "Prosopon è un modulo Drupal che gestisce l'entità Persona.",
+    "type": "drupal-module",
+    "license": "GPL-3.0-only",
+    "homepage": "https://github.com/ouitoulia/prosopon",
+    "authors": [
+        {
+            "name": "Pietro Arturo Panetta",
+            "homepage":"https://www.drupal.org/u/arturopanetta",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ouitoulia/prosopon/issues",
+        "source": "https://github.com/ouitoulia/prosopon"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "drupal/field_group": "^3",
+        "ouitoulia/lexika": "^1"
+    }
+}
