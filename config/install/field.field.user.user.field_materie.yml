@@ -10,7 +10,7 @@ field_name: field_materie
 entity_type: user
 bundle: user
 label: Materie
-description: 'Se si tratta di un profilo docente, seleziona una o più materie da associare. Puoi cercare per nome della materia o codice MIUR.'
+description: 'Se si tratta di un profilo docente, seleziona una o più materie da associare. Puoi cercare per nome della materia o codice MIUR. Questa informazione sarà visibile <strong>a tutti i visitatori</strong>.'
 required: false
 translatable: false
 default_value: {  }
