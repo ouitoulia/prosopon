@@ -16,14 +16,10 @@ $ drush -y pm:install prosopon
 ```
 Le dipendenze verranno installate automaticamente e questo è il risultato:
 
-Anagrafica
 ![Screenshot scheda anagrafica](docs/anagrafica.png "Screenshot scheda anagrafica")
 
-Contratto
 ![Screenshot scheda contratto](docs/contratto.png "Screenshot scheda contratto")
 
-Contatti pubblici
 ![Screenshot scheda contatti pubblici](docs/contatti.png "Screenshot scheda contatti pubblici")
 
-Informazioni
 ![Screenshot scheda informazioni](docs/informazioni.png "Screenshot scheda informazioni")
