@@ -10,6 +10,7 @@ dependencies:
     - field.field.user.user.field_email
     - field.field.user.user.field_extra_info
     - field.field.user.user.field_genere
+    - field.field.user.user.field_materie
     - field.field.user.user.field_nome
     - field.field.user.user.field_picture
     - field.field.user.user.field_telefono
@@ -119,6 +120,7 @@ third_party_settings:
     group_contratto:
       children:
         - field_tipologia_posto
+        - field_materie
         - field_tipologia_incarico
         - field_tipologia_supplenza
         - field_data_fine_incarico
@@ -176,7 +178,7 @@ content:
     third_party_settings: {  }
   field_data_fine_incarico:
     type: datetime_default
-    weight: 29
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -201,6 +203,16 @@ content:
     weight: 6
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_materie:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_nome:
     type: string_textfield
@@ -227,7 +239,7 @@ content:
     third_party_settings: {  }
   field_tipologia_incarico:
     type: options_select
-    weight: 27
+    weight: 28
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -239,7 +251,7 @@ content:
     third_party_settings: {  }
   field_tipologia_supplenza:
     type: options_select
-    weight: 28
+    weight: 29
     region: content
     settings: {  }
     third_party_settings: {  }
