@@ -32,7 +32,7 @@ Le dipendenze verranno installate automaticamente e questo è il risultato:
 | Nome e cognome                             | field_nome, <br/>field_cognome                               | L'informazione è stata divisa in due campi                         |
 | Foto della persona                         | field_picture                                                |                                                                    |
 | Ruolo nell'organizzazione                  | entity:user, bundle:user_role                                | I ruoli vengono sincronizzati con `ouitoulia/sunchronizo_prosopon` |
-| Ruolo (secondo livello)                    | entity:user, bundle:user_role                                             |                                                                    |
+| Ruolo (secondo livello)                    | entity:user, bundle:user_role                                |                                                                    |
 | Biografia                                  | field_biografia                                              |                                                                    |
 | Dove lavora                                | **View relazione con CT `luogo`**                            |                                                                    |
 | Strutture di cui la persona è responsabile | **View relazione altri CT con `field_persona_responsabile`** |                                                                    |
