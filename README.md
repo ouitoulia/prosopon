@@ -18,7 +18,7 @@ il content type che importa questo modulo è il [CT persona](https://docs.google
 
 ## Installazione
 Per aggiungere il modulo alla tua installazione esegui:
-```
+```bash
 $ composer require ouitoulia/prosopon
 $ drush -y pm:install prosopon
 ```
