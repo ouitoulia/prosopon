@@ -1,4 +1,10 @@
 # Pròsopon
+
+![GitHub](https://img.shields.io/github/license/ouitoulia/prosopon?style=for-the-badge)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/ouitoulia/prosopon?sort=semver&style=for-the-badge)
+![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/ouitoulia/prosopon/drupal/core?style=for-the-badge)
+![Packagist Downloads](https://img.shields.io/packagist/dt/ouitoulia/prosopon?style=for-the-badge)
+
 [Pròsopon](https://www.grecoantico.com/dizionario-greco-antico.php?parola=proswpon) è un modulo Drupal che gestisce l'entità Persona.
 L'architettura dei campi è basata sulla [v1.0](https://docs.google.com/spreadsheets/d/1MoayTY05SE4ixtgBsfsdngdrFJf_Z2KNvDkMF3tKfc8/edit#gid=782511705)
 dell'architettura dell'informazione dei siti web delle scuole,

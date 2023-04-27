@@ -18,6 +18,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "drupal/core": "^10",
         "drupal/field_group": "^3",
         "ouitoulia/lexika": "^1"
     }
