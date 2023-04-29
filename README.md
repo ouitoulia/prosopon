@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/ouitoulia/prosopon?style=for-the-badge)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/ouitoulia/prosopon?sort=semver&style=for-the-badge)
-![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/ouitoulia/prosopon/drupal/core?style=for-the-badge)
+![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/ouitoulia/prosopon/drupal/core-recommended?style=for-the-badge)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/ouitoulia/prosopon?style=for-the-badge)
 
 [Pròsopon](https://www.grecoantico.com/dizionario-greco-antico.php?parola=proswpon) è un modulo Drupal che gestisce l'entità Persona.
