@@ -1,0 +1,323 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.persona.body
+    - field.field.node.persona.field_abstract
+    - field.field.node.persona.field_codice_fiscale
+    - field.field.node.persona.field_cognome
+    - field.field.node.persona.field_data_fine
+    - field.field.node.persona.field_data_nascita
+    - field.field.node.persona.field_email
+    - field.field.node.persona.field_extra_info
+    - field.field.node.persona.field_genere
+    - field.field.node.persona.field_materie
+    - field.field.node.persona.field_nome
+    - field.field.node.persona.field_ritratto
+    - field.field.node.persona.field_ruolo_persona
+    - field.field.node.persona.field_telefono
+    - field.field.node.persona.field_tipologia_incarico
+    - field.field.node.persona.field_tipologia_posto
+    - field.field.node.persona.field_tipologia_supplenza
+    - image.style.focal_point_thumbnail_2x_1_1_200x200_
+    - node.type.persona
+  module:
+    - datetime
+    - field_group
+    - focal_point
+    - imce
+    - paragraphs
+    - path
+    - telephone
+    - term_reference_tree
+third_party_settings:
+  field_group:
+    group_persona:
+      children:
+        - group_biografia
+        - group_contatti
+        - group_contratto
+        - group_anagrafica
+      label: Persona
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_biografia:
+      children:
+        - field_ritratto
+        - field_nome
+        - field_cognome
+        - field_abstract
+        - field_extra_info
+      label: Biografia
+      region: content
+      parent_name: group_persona
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_contratto:
+      children:
+        - field_ruolo_persona
+        - field_tipologia_posto
+        - field_tipologia_incarico
+        - field_tipologia_supplenza
+        - field_data_fine
+        - field_materie
+      label: Contratto
+      region: content
+      parent_name: group_persona
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_contatti:
+      children:
+        - field_telefono
+        - field_email
+      label: Contatti
+      region: content
+      parent_name: group_persona
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_anagrafica:
+      children:
+        - field_data_nascita
+        - field_genere
+        - field_codice_fiscale
+      label: Anagrafica
+      region: content
+      parent_name: group_persona
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.persona.default
+targetEntityType: node
+bundle: persona
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abstract:
+    type: string_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_codice_fiscale:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cognome:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_data_fine:
+    type: datetime_default
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_data_nascita:
+    type: datetime_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_extra_info:
+    type: paragraphs
+    weight: 13
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_genere:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_materie:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nome:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ritratto:
+    type: image_focal_point
+    weight: 9
+    region: content
+    settings:
+      progress_indicator: bar
+      preview_image_style: focal_point_thumbnail_2x_1_1_200x200_
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings:
+      imce:
+        enabled: false
+  field_ruolo_persona:
+    type: term_reference_tree
+    weight: 14
+    region: content
+    settings:
+      start_minimized: false
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_telefono:
+    type: telephone_default
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_tipologia_incarico:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tipologia_posto:
+    type: options_select
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tipologia_supplenza:
+    type: options_select
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 19
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 17
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true

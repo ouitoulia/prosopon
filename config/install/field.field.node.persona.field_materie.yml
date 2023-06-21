@@ -2,13 +2,12 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.user.field_materie
-  module:
-    - user
-id: user.user.field_materie
+    - field.storage.node.field_materie
+    - node.type.persona
+id: node.persona.field_materie
 field_name: field_materie
-entity_type: user
-bundle: user
+entity_type: node
+bundle: persona
 label: Materie
 description: 'Se si tratta di un profilo docente, seleziona una o più materie da associare. Puoi cercare per nome della materia o codice MIUR. Questa informazione sarà visibile <strong>a tutti i visitatori</strong>.'
 required: false
@@ -19,7 +18,7 @@ settings:
   handler: views
   handler_settings:
     view:
-      view_name: persone_materie_associate
-      display_name: entity_reference_1
+      view_name: tassonomia_ricerca_avanzata_campi
+      display_name: materie
       arguments: {  }
 field_type: entity_reference

@@ -2,14 +2,14 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.user.field_genere
+    - field.storage.node.field_genere
+    - node.type.persona
   module:
     - options
-    - user
-id: user.user.field_genere
+id: node.persona.field_genere
 field_name: field_genere
-entity_type: user
-bundle: user
+entity_type: node
+bundle: persona
 label: Genere
 description: 'Seleziona il genere. Questa informazione sarà visibile <strong>solo agli amministratori</strong>.'
 required: false

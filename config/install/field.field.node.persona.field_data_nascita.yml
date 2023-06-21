@@ -2,14 +2,14 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.user.field_data_di_nascita
+    - field.storage.node.field_data_nascita
+    - node.type.persona
   module:
     - datetime
-    - user
-id: user.user.field_data_di_nascita
-field_name: field_data_di_nascita
-entity_type: user
-bundle: user
+id: node.persona.field_data_nascita
+field_name: field_data_nascita
+entity_type: node
+bundle: persona
 label: 'Data di nascita'
 description: 'Inserisci la data di nascita. Questa informazione sarà visibile <strong>solo agli amministratori</strong>.'
 required: false

@@ -2,17 +2,16 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.user.field_tipologia_incarico
+    - field.storage.node.field_tipologia_incarico
+    - node.type.persona
     - taxonomy.vocabulary.tipologia_incarichi
-  module:
-    - user
-id: user.user.field_tipologia_incarico
+id: node.persona.field_tipologia_incarico
 field_name: field_tipologia_incarico
-entity_type: user
-bundle: user
+entity_type: node
+bundle: persona
 label: 'Tipologia incarico'
-description: "Seleziona la tipologia dell'incarico.  Questa informazione sarà visibile <strong>solo agli amministratori</strong>."
-required: false
+description: "Seleziona la tipologia dell'incarico. Questa informazione sarà visibile <strong>solo agli amministratori</strong>."
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

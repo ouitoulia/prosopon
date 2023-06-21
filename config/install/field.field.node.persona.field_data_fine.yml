@@ -2,19 +2,22 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.user.field_data_fine_incarico
+    - field.storage.node.field_data_fine
+    - node.type.persona
   module:
     - datetime
-    - user
-id: user.user.field_data_fine_incarico
-field_name: field_data_fine_incarico
-entity_type: user
-bundle: user
+id: node.persona.field_data_fine
+field_name: field_data_fine
+entity_type: node
+bundle: persona
 label: 'Durata incarico'
 description: 'Nel caso in cui la tipologia dell''incarico è a "Tempo determinato", seleziona la data di fine dell''incarico.  Questa informazione sarà visibile <strong>solo agli amministratori</strong>.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+180 days'
 default_value_callback: ''
 settings: {  }
 field_type: datetime

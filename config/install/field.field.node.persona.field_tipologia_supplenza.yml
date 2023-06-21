@@ -2,14 +2,13 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.user.field_tipologia_supplenza
+    - field.storage.node.field_tipologia_supplenza
+    - node.type.persona
     - taxonomy.vocabulary.tipologia_supplenze
-  module:
-    - user
-id: user.user.field_tipologia_supplenza
+id: node.persona.field_tipologia_supplenza
 field_name: field_tipologia_supplenza
-entity_type: user
-bundle: user
+entity_type: node
+bundle: persona
 label: 'Tipologia supplenza'
 description: 'Nel caso in cui la tipologia dell''incarico è a "Tempo determinato", seleziona la tipologia della supplenza. Questa informazione sarà visibile <strong>solo agli amministratori</strong>.'
 required: false

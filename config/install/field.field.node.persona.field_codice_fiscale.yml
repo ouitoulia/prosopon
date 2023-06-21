@@ -1,0 +1,18 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_codice_fiscale
+    - node.type.persona
+id: node.persona.field_codice_fiscale
+field_name: field_codice_fiscale
+entity_type: node
+bundle: persona
+label: 'Codice fiscale'
+description: "Inserisci il codice fiscale. Questa informazione sarà visibile <strong>solo agli amministratori</strong>. Questo campo è necessario per associare la scheda persona all'eventuale utente registrato o che fa login tramite SSO."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.persona
+id: node.persona.field_email
+field_name: field_email
+entity_type: node
+bundle: persona
+label: 'Indirizzo email'
+description: 'Inserisci uno o più indirizzi email da pubblicare sul sito web.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

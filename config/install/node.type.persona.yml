@@ -1,0 +1,10 @@
+langcode: it
+status: true
+dependencies: {  }
+name: Persona
+type: persona
+description: 'Struttura delle informazioni relative alle persone di un''organizzazione, funzionale alla creazione di una scheda persona (tipo di contenuto "Persona")'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

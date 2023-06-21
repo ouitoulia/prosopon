@@ -2,13 +2,12 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.user.field_nome
-  module:
-    - user
-id: user.user.field_nome
+    - field.storage.node.field_nome
+    - node.type.persona
+id: node.persona.field_nome
 field_name: field_nome
-entity_type: user
-bundle: user
+entity_type: node
+bundle: persona
 label: Nome
 description: 'Inserisci il nome o i nomi separati dallo spazio. Questa informazione sarà visibile <strong>a tutti i visitatori</strong>.'
 required: true

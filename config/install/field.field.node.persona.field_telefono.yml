@@ -2,16 +2,16 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.user.field_telefono
+    - field.storage.node.field_telefono
+    - node.type.persona
   module:
     - telephone
-    - user
-id: user.user.field_telefono
+id: node.persona.field_telefono
 field_name: field_telefono
-entity_type: user
-bundle: user
+entity_type: node
+bundle: persona
 label: 'Numero di telefono'
-description: 'Inserisci uno o più numeri di telefono da pubblicare sul sito web, in modo che i visitatori possano contattarti.'
+description: 'Inserisci uno o più numeri di telefono da pubblicare sul sito web.'
 required: false
 translatable: false
 default_value: {  }

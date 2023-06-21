@@ -1,17 +1,14 @@
 name: "Pròsopon"
-description: "Pròsopon è un modulo Drupal che gestisce l'entità Persona."
+description: "Pròsopon è un modulo Drupal che gestisce il tipo di contenuto Persona."
 package: "Ouitoulía"
 
 type: module
 core_version_requirement: ^10
 dependencies:
-  - drupal:datetime
-  - drupal:field
-  - drupal:file
-  - drupal:image
-  - drupal:options
-  - drupal:telephone
-  - drupal:text
   - drupal:views
-  - drupal:field_group
+  - field_group:field_group
+  - focal_point:focal_point
+  - term_reference_tree:term_reference_tree
+  - imce:imce
   - ouitoulia:lexika
+  - ouitoulia:themethla

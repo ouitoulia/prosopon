@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruolo_persona
+    - node.type.persona
+    - taxonomy.vocabulary.ruoli_persona
+id: node.persona.field_ruolo_persona
+field_name: field_ruolo_persona
+entity_type: node
+bundle: persona
+label: "Ruolo nell'organizzazione"
+description: 'Scegli il ruolo della persona nella tua organizzazione scolastica.  Questa informazione sarà visibile <strong>a tutti i visitatori</strong>. Nota: il termine <em>ruolo</em> viene anche utilizzato per la gestione degli utenti registrati, il campo che stai valorizzando non riguarda i ruoli degli utenti registrati, se stai cercando di cambiare i permessi contatta il responsabile del sito web.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ruoli_persona: ruoli_persona
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
