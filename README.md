@@ -13,7 +13,7 @@ il content type che importa questo modulo è il [CT persona](https://docs.google
 ## Requisiti
 - Drupal: >= 10
 - Profilo Drupal: `minimal`
-- Moduli contrib: `field_group`, `focal_point`, `imce`, `term_reference_tree`
+- Moduli contrib: `field_group`, `focal_point`, `imce`, `term_reference_tree`, `toc_js`
 - Moduli Ouitoulìa: `themethla`
 
 ## Installazione
