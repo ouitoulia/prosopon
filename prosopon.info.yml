@@ -5,8 +5,9 @@ package: "Ouitoulía"
 type: module
 core_version_requirement: ^10
 dependencies:
-  - drupal:views
+  - drupal:menu_ui
   - drupal:responsive_image
+  - drupal:views
   - field_group:field_group
   - focal_point:focal_point
   - term_reference_tree:term_reference_tree
