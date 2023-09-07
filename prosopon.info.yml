@@ -6,9 +6,11 @@ type: module
 core_version_requirement: ^10
 dependencies:
   - drupal:views
+  - drupal:responsive_image
   - field_group:field_group
   - focal_point:focal_point
   - term_reference_tree:term_reference_tree
   - imce:imce
+  - toc_js:toc_js
   - ouitoulia:lexika
   - ouitoulia:themethla

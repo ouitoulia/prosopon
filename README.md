@@ -32,6 +32,8 @@ Le dipendenze verranno installate automaticamente e questo è il risultato:
 
 ![Screenshot scheda anagrafica](docs/anagrafica.png "Screenshot scheda anagrafica")
 
+![Screenshot frontend](docs/frontend.png "Screenshot risultato frontend")
+
 ## Implementazione tipo Persona
 | Architettura                               | Implementazione                                              | Note                                                                                                                                     |
 |--------------------------------------------|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|

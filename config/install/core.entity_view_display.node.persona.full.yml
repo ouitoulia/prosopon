@@ -21,9 +21,10 @@ dependencies:
     - field.field.node.persona.field_tipologia_posto
     - field.field.node.persona.field_tipologia_supplenza
     - node.type.persona
+    - responsive_image.styles.persona_view_full
   module:
     - entity_reference_revisions
-    - image
+    - responsive_image
     - telephone
     - user
 id: node.persona.full
@@ -80,11 +81,11 @@ content:
     weight: 1
     region: content
   field_ritratto:
-    type: image
+    type: responsive_image
     label: hidden
     settings:
+      responsive_image_style: persona_view_full
       image_link: ''
-      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -107,6 +108,11 @@ content:
     weight: 7
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  toc_js:
     settings: {  }
     third_party_settings: {  }
     weight: 9

@@ -21,6 +21,7 @@
         "drupal/core-recommended": "^10",
         "drupal/field_group": "^3",
         "drupal/term_reference_tree": "^2.0",
+        "drupal/toc_js": "^2.1",
         "ouitoulia/lexika": "^1"
     }
 }

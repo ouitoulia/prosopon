@@ -1,0 +1,29 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - image.style.focal_point_thumbnail_1x_1_1_100x100_
+    - image.style.focal_point_thumbnail_2x_1_1_200x200_
+    - image.style.focal_point_thumbnail_3x_1_1_300x300_
+  theme:
+    - bootstrap_italia
+id: persona_view_full
+label: 'Persona view full'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: focal_point_thumbnail_3x_1_1_300x300_
+    breakpoint_id: bootstrap_italia.extra_large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: focal_point_thumbnail_2x_1_1_200x200_
+    breakpoint_id: bootstrap_italia.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: focal_point_thumbnail_1x_1_1_100x100_
+    breakpoint_id: bootstrap_italia.extra_small
+    multiplier: 1x
+breakpoint_group: bootstrap_italia
+fallback_image_style: focal_point_thumbnail_1x_1_1_100x100_
