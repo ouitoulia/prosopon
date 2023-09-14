@@ -1,0 +1,21 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full
+    - field.field.user.user.field_codice_fiscale
+  module:
+    - user
+id: user.user.full
+targetEntityType: user
+bundle: user
+mode: full
+content:
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_codice_fiscale: true
+  langcode: true
