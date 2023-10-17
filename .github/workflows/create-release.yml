@@ -1,21 +1,80 @@
-name: "Build Release"
+name: "Create release"
 
 on:
   push:
-    tags:
+    branches:
       - '*'
-#      - '/^\d+\.\d+\.\d+(-\w+)?$/'
 
 jobs:
   release:
     name: "Release"
-
     runs-on: "ubuntu-latest"
     permissions:
       contents: write
 
     steps:
       - uses: actions/checkout@v3
-      - uses: ncipollo/release-action@v1
         with:
+          fetch-depth: 0
+          ref: 1.x
+
+      - name: Fixup git permissions
+        # https://github.com/actions/checkout/issues/766
+        shell: bash
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"              
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: Get current date and commit message
+        id: data
+        run: |
+          echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+          echo "datestamp=$(date +'%s')" >> $GITHUB_ENV
+          echo "commit_message=$(git log -1 --pretty=%B)" >> $GITHUB_ENV
+          echo "project_name=$(echo $GITHUB_REPOSITORY | cut -d/ -f2)" >> $GITHUB_ENV
+
+      - name: Check release tag in commit message
+        id: check_tag
+        run: |
+          COMMIT_MESSAGE="${{ env.commit_message }}"
+          if [[ $COMMIT_MESSAGE == release* ]]; then
+            TAG=$(echo "$COMMIT_MESSAGE" | grep -o -P '\(.*?\)' | tr -d '()')
+            MESSAGE=$(echo "$COMMIT_MESSAGE" | sed -n -e 's/^release(.*):\(.*\)$/\1/p')
+            if [ -n "$TAG" ] && [ -n "$MESSAGE" ]; then
+              echo "Release tag found: $TAG"
+          
+              if grep -q "^# Information added by GitHub Action" "${{ env.project_name }}.info.yml"; then
+                sed -i -e '/^# Information added by GitHub Action/,$d' "${{ env.project_name }}.info.yml"
+              fi
+          
+              echo -e "# Information added by GitHub Action packaging script on ${{ env.date }}" >> "${{ env.project_name }}.info.yml"
+              echo "version: '$TAG'" >> "${{ env.project_name }}.info.yml"
+              echo "project: '$(echo ${{ env.project_name }} | awk '{print toupper(substr($1,1,1)) tolower(substr($1,2))}')'" >> "${{ env.project_name }}.info.yml"
+              echo "datestamp: ${{ env.datestamp }}" >> "${{ env.project_name }}.info.yml"
+              echo "message: '$MESSAGE'" >> "${{ env.project_name }}.info.yml"
+          
+              git add "${{ env.project_name }}.info.yml"
+              git commit -m "Update version"
+              git push origin
+              git tag $TAG
+              git push origin $TAG
+          
+              echo "valid_tag=true" >> $GITHUB_ENV
+              echo "release_tag=${TAG}" >> $GITHUB_ENV
+            else
+              echo "Invalid release tag format. Skipping the action."
+              echo "valid_tag=false" >> $GITHUB_ENV
+            fi
+          else
+            echo "No valid release tag found in commit message. Skipping the action."
+            echo "valid_tag=false" >> $GITHUB_ENV
+          fi
+
+      - name: Create GitHub Release
+        if: env.valid_tag == 'true'
+        uses: ncipollo/release-action@v1
+        with:
+          name: ${{ env.release_tag }}
+          tag: ${{ env.release_tag }}
           token: ${{ secrets.GITHUB_TOKEN }}
