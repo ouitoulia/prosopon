@@ -16,3 +16,8 @@ dependencies:
   - ouitoulia:lexika
   - ouitoulia:themethla
 
+# Information added by GitHub Action packaging script on 2023-10-17
+version: '3.0.2'
+project: 'Prosopon'
+datestamp: 1697524140
+message: ' release script'
