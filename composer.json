@@ -1,6 +1,6 @@
 {
     "name": "ouitoulia/prosopon",
-    "description": "Pròsopon è un modulo Drupal che gestisce il tipo di contenuto Persona.",
+    "description": "Pròsopon è un modulo Drupal che gestisce gli utenti.",
     "type": "drupal-module",
     "license": "GPL-3.0-only",
     "homepage": "https://github.com/ouitoulia/prosopon",
@@ -18,10 +18,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "drupal/core-recommended": "^10",
-        "drupal/field_group": "^3",
-        "drupal/term_reference_tree": "^2.0",
-        "drupal/toc_js": "^2.1",
-        "ouitoulia/lexika": "^1"
+        "drupal/core-recommended": "^10"
     }
 }

@@ -1,20 +1,12 @@
 name: "Pròsopon"
-description: "Pròsopon è un modulo Drupal che gestisce il tipo di contenuto Persona."
+description: "Pròsopon è un modulo Drupal che gestisce gli utenti."
 package: "Ouitoulía"
 
 type: module
 core_version_requirement: ^10
 dependencies:
-  - drupal:menu_ui
-  - drupal:responsive_image
-  - drupal:views
-  - field_group:field_group
-  - focal_point:focal_point
-  - term_reference_tree:term_reference_tree
-  - imce:imce
-  - toc_js:toc_js
-  - ouitoulia:lexika
-  - ouitoulia:themethla
+  - drupal:path
+  - drupal:user
 
 # Information added by GitHub Action packaging script on 2023-10-17
 version: '3.0.2'
