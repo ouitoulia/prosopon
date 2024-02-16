@@ -8,8 +8,8 @@ dependencies:
   - drupal:path
   - drupal:user
 
-# Information added by GitHub Action packaging script on 2023-10-19
-version: '4.0.0'
+# Information added by GitHub Action packaging script on 2024-02-16
+version: '4.0.1'
 project: 'Prosopon'
-datestamp: 1697702664
-message: ' refactoring'
+datestamp: 1708066166
+message: ' up ci to checkout v4'
