@@ -3,7 +3,7 @@ description: "Pròsopon è un modulo Drupal che gestisce gli utenti."
 package: "Ouitoulía"
 
 type: module
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - drupal:path
   - drupal:user
