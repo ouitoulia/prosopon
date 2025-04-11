@@ -10,7 +10,7 @@ field_name: field_codice_fiscale
 entity_type: user
 bundle: user
 label: 'Codice fiscale'
-description: "Codice fiscale dell'utente. Questo campo è necessario per gli utenti che effettuano l'accesso tramite SSO. Questa informazione sarà visibile <strong>solo agli amministratori</strong>."
+description: "Codice fiscale dell'utente. Questo campo è necessario per gli utenti che effettuano l'accesso tramite SSO. Questa informazione sarà visibile <strong>solo agli amministratori</strong>.<br>\r\n<strong>N.B. Nel caso in cui vedi una stringa di caratteri alfanumerici molto lunga, NON la modificare.</strong>"
 required: true
 translatable: false
 default_value: {  }
