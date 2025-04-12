@@ -8,8 +8,7 @@ dependencies:
   - drupal:path
   - drupal:user
 
-# Information added by GitHub Action packaging script on 2025-04-11
-version: '4.2.0'
+# Information added by GitHub Action packaging script on 2025-04-12
+version: '4.2.1'
 project: 'Prosopon'
-datestamp: 1744382415
-message: ' fix descrizione campo'
+datestamp: 1744472956
