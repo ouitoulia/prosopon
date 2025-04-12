@@ -52,7 +52,6 @@ jobs:
               echo "version: '$TAG'" >> "${{ env.project_name }}.info.yml"
               echo "project: '$(echo ${{ env.project_name }} | awk '{print toupper(substr($1,1,1)) tolower(substr($1,2))}')'" >> "${{ env.project_name }}.info.yml"
               echo "datestamp: ${{ env.datestamp }}" >> "${{ env.project_name }}.info.yml"
-              echo "message: '$MESSAGE'" >> "${{ env.project_name }}.info.yml"
           
               git add "${{ env.project_name }}.info.yml"
               git commit -m "Update version"
