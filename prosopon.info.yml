@@ -8,7 +8,7 @@ dependencies:
   - drupal:path
   - drupal:user
 
-# Information added by GitHub Action packaging script on 2025-04-12
-version: '4.2.1'
+# Information added by GitHub Action packaging script on 2026-11-21
+version: '4.3.0'
 project: 'Prosopon'
-datestamp: 1744472956
+datestamp: 1795274303
