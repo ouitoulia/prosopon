@@ -9,6 +9,6 @@ dependencies:
   - drupal:user
 
 # Information added by GitHub Action packaging script on 2026-11-28
-version: '4.4.0'
+version: '4.5.0'
 project: 'Prosopon'
-datestamp: 1795874929
+datestamp: 1795875669
